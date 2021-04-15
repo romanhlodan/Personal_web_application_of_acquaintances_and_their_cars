@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Services</title>
+</head>
+<body>
+<form action="/carService/create" method="post">
+    <b>Назва сервісу</b>
+    <input type="text" name="title">
+    <b>Локація</b>
+    <input type="text" name="location">
+    <b>Кількість працівників</b>
+    <input type="number" name="staff"><br>
+    <input type="submit">
+</form>
+
+<ul th:each="service : ${service}">
+    <li> <a th:href="''"></a></li>
+</ul>
+
+</body>
+</html>

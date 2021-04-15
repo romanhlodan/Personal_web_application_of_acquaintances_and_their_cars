@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${person.fname}"></title>
+</head>
+<body>
+<p>Це контакт: <em th:text="${person.lname} + ' ' + ${person.fname}"></em></p>
+<p>Йому: <em th:text="${person.age}">р.</em></p>
+<p>Серія паспорта: <em th:text="${person.getPassport().serialNumber}"></em></p>
+<p>Їздить на: </p>
+<ul th:each="car : ${person.getCars()}">
+    <li th:text="${car.getBrand()}+' '+ ${car.getModel()}+' '+${car.getGraduation_year()}"></li>
+</ul>
+<br>
+<button> <a th:href="'/person/'+${person.id}+'/addCar'">Add Car</a></button>
+</body>
+</html>

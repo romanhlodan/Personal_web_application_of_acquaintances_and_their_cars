@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${person.fname}">Add car to Person</title>
+</head>
+<body>
+<form th:action="'/person/'+${person.id}+'/addCar/choiceCar'" method="post">
+    <ul th:each="car: ${cars}">
+        <li><input th:name="car_id" type="radio"
+                   th:value="${car.id}"
+                   th:text="${car.getBrand()}+' '+ ${car.getModel()}+' '+${car.getGraduation_year()}"></li>
+    </ul>
+    <input type="submit">
+</form>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>BD_Person</title>
+</head>
+<body>
+<h3>Person</h3>
+<div class="font-menu-button"><ul th:each="person : ${people}">
+    <li><a th:href="'/person/' + ${person.id}" th:text="${person.fname} + ' ' + ${person.lname}"></a></li>
+</ul></div>
+<button><a th:href="'/newPerson'">Додати нову особу</a></button><br>
+<br>
+<button><a th:href="'/newCar'">Додати новий автомобіль</a></button><br>
+<button><a th:href="'/carService'">Додати новий автомобіль</a></button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Person</title>
+</head>
+<body>
+
+<div> <form action="/person/create" method="post">
+    <p>Введіть ім'я</p>
+    <input required type="text" name="fname" placeholder="Ім'я">
+    <p>Введіть прізвище</p>
+    <input required type="text" name="lname" placeholder="Прізвище">
+    <p>Вкажіть вік</p>
+    <input required type="number" name="age" placeholder="Вік">
+    <p>Вкажіть серію паспорта</p>
+    <input required type="text" name="SerialNumber" placeholder="Паспорт">
+    <br>
+    <br>
+    <input type="submit">
+</form></div>
+</body>
+</html>

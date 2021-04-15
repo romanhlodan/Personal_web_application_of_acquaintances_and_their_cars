@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Car</title>
+</head>
+<body>
+<div  > <form action="car/create" method="post">
+    <b>Марка</b>
+    <input required type="text" name="brand">
+    <b>Модель</b>
+    <input required type="text" name="model">
+    <b>Рік випуску</b>
+    <input required type="number" name="graduation_year"><br>
+    <br>
+    <input type="submit">
+  </form></div>
+<div> <ul th:each="car : ${cars}">
+    <li th:text="${car.brand} + ' ' + ${car.model} +' '+ ${car.graduation_year}"></li>
+</ul></div>
+</body>
+</html>
