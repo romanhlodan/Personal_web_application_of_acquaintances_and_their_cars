@@ -9,7 +9,7 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
-@ToString(exclude = {"person","services"})
+@ToString(exclude = {"person", "services"})
 @Entity
 public class Car {
     @Id
@@ -19,7 +19,7 @@ public class Car {
     private String model;
     private int graduation_year;
 
-    @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Person person;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "car")

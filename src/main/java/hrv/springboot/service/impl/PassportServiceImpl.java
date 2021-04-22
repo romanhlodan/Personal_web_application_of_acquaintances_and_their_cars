@@ -35,4 +35,9 @@ public class PassportServiceImpl implements PassportService {
     public void deleteById(int id) {
         passportDAO.deleteById(id);
     }
+
+    @Override
+    public void flush() {
+        passportDAO.flush();
+    }
 }

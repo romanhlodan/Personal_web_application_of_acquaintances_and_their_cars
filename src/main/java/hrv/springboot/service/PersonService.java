@@ -13,4 +13,6 @@ public interface PersonService {
     Optional<Person> findById(int id);
 
     void deleteById(int id);
+
+    void flush();
 }

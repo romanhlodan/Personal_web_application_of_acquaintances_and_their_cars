@@ -13,4 +13,6 @@ public interface PassportService {
     Optional<Passport> findById(int id);
 
     void deleteById(int id);
+
+    void flush();
 }

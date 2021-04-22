@@ -13,4 +13,6 @@ public interface ServiceService {
     Optional<Service> findById(int id);
 
     void deleteById(int id);
+
+    void flush();
 }

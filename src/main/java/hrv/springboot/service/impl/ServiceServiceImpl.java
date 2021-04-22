@@ -32,4 +32,9 @@ public class ServiceServiceImpl implements ServiceService {
     public void deleteById(int id) {
         serviceDAO.deleteById(id);
     }
+
+    @Override
+    public void flush() {
+        serviceDAO.flush();
+    }
 }
